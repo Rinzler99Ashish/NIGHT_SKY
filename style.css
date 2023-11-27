@@ -1,0 +1,174 @@
+body{
+    padding: 0%;
+    margin: 0%;
+}
+#main{
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background-color: black;
+}
+#back-fixed-star-div{
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+#back-fixed-star-div-back{
+    rotate: 18deg;
+    position: absolute;
+    translate: -10vw -20vw;
+}
+.star{
+    z-index: 5;
+    scale: 0.2;
+    position: absolute;
+    height: 0.2vw;
+    width: 30vw;
+    border-radius: 20vw;
+    background-image: linear-gradient(270deg,white,white,rgba(255, 255, 255, 0.952),
+    rgba(255, 255, 255, 0.9),rgba(255, 255, 255, 0.7),rgba(255, 255, 255, 0.5),
+    rgba(255, 255, 255, 0.4),rgba(255, 255, 255, 0.3),
+    rgba(255, 255, 255, 0.25),rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0.01));
+    animation: opac-anime 5s ease-in-out;
+}
+@keyframes opac-anime{
+    60%{
+        opacity: 1;
+        scale: 0.2;
+    }
+    100%{
+        opacity: 0;
+        scale: 0.1;
+    }
+}
+.aura{
+    opacity: 0.7;
+    z-index: -1;
+    translate: 27.5vw -2.3vw;
+    position: absolute;
+    width: 5vw;
+    height:5vw;
+    border-radius: 50%;
+    background-image: radial-gradient(rgba(255, 255, 255, 0.4),rgba(255, 255, 255, 0.3),rgba(255, 255, 255, 0.2),rgba(255, 255, 255, 0.15),rgba(255, 255, 255, 0.1),rgba(255, 255, 255, 0.05),rgba(255, 255, 255, 0.01),rgba(255, 255, 255, 0));
+}
+
+
+
+
+.dot-star-class{
+    position: absolute;
+    width: 0.1vw;
+    height: 0.1vw;
+    border-radius: 50%;
+    background-color: rgb(255, 255, 255);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#star-image{
+    width: 3.5vw;
+}
+#back-fixed-star-div-center div:nth-of-type(1){
+    translate: 0vw 10vw;
+    width: 100vw;
+    text-align: center;
+}
+#back-fixed-star-div-center div:nth-of-type(2){
+    translate: 32.3vw 11vw;
+    width: 35vw;
+    color: white;
+    font-family: 'DM Serif Display', serif;
+    text-align: center;
+    font-size: 2.7vw;
+}
+#back-fixed-star-div-center div:nth-of-type(3){
+    cursor: pointer;
+    translate: 39.7vw 12vw;
+    width: 20vw;
+    height: 5vw;
+    line-height: 5vw;
+    border-radius: 30vw;
+    font-size: 1.4vw;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    background-image: linear-gradient(200deg,blue,purple);
+    transition: 300ms;
+}
+#back-fixed-star-div-center div:nth-of-type(3):hover{
+    background-image: linear-gradient(200deg,rgba(0, 0, 255, 0.8),rgba(128, 0, 128, 0.8));
+}
+#back-fixed-star-div-center div:nth-of-type(4){
+    translate: 0vw 12.5vw;
+    color: rgb(165, 155, 155);
+    font-family: 'Montserrat', sans-serif;
+    width: 100vw;
+    text-align: center;
+    font-size: 1vw;
+}
+#back-fixed-star-div-menus{
+    translate:35vw 27vw;
+    font-size: 1vw;
+    display: flex;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    width: 30vw;
+    justify-content: space-evenly;
+}
+#back-fixed-star-div-social-contact>div:nth-of-type(2){
+     display: flex; 
+     justify-content: space-evenly;
+     width: 20vw;
+     translate: 78.6vw 27.2vw;
+}
+.contact-bg{
+    cursor: pointer;
+    height: 2.5vw;
+    width: 2.5vw;
+    background-image: linear-gradient(150deg,blue,purple);
+    border-radius: 50%;
+}
+.image-contact{
+    width: 2.5vw;
+    scale: 0.5;
+    transition: 0.3s;
+}
+.cursor_default{
+    cursor: pointer;
+}
+
+
+
+
+
+
+#back-fixed-star-div-social-contact>div:nth-of-type(1){
+    position: absolute;
+    color: rgb(145, 145, 145);
+    font-size: 1vw;
+    translate:3.5vw 27.7vw;
+    font-family: 'Montserrat', sans-serif;
+}
+#back-fixed-star-div-social-contact>div:nth-of-type(1)::after{
+    content: " Mr BEAST";
+    color: rgb(255, 255, 255);
+}
