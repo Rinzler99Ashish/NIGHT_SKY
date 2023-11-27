@@ -5,14 +5,14 @@ let star_naming_code=0;
 
 
 setInterval(()=>{
-    let no_of_stars=Math.floor(Math.random()*2);
+    let no_of_stars=Math.floor(Math.random()*3);
     star_start(no_of_stars);
 },400);//produce number of stars
 
 
 
 function star_life(newDiv){
-    let duration_of_star=Math.floor(Math.random()*3500+3000);
+    let duration_of_star=Math.floor(Math.random()*5000+2000);
     setTimeout(()=>{
         newDiv.remove();
     },duration_of_star);
@@ -24,10 +24,9 @@ function star_life(newDiv){
 async function star_style(newDiv,duration_of_star){
     newDiv.classList.add("star");
 
-    let Y_axis_position=(Math.random()*40);
-    newDiv.style.translate=(`0vw ${Y_axis_position}vw`);
+    let Y_axis_position=(Math.random()*40+10);
 
-    newDiv.style.animationDuration=`${duration_of_star+100}ms`;//make number to 0 to have twinkle effect
+    newDiv.style.animationDuration=`${duration_of_star+100}ms`;
 
     let x=0,y=0,opacity=0,timer=0,time_clock;
     time_clock=setInterval(()=>{
@@ -39,7 +38,22 @@ async function star_style(newDiv,duration_of_star){
             clearInterval(time_clock);
         }
         else{
-            newDiv.style.translate=(`${x++/20}vw ${Y_axis_position}vw`);
+            if(duration_of_star<2500){
+            newDiv.style.translate=(`${x++/5}vw ${Y_axis_position}vw`);
+            newDiv.style.scale="0.25" ;
+            }
+            else if(duration_of_star>=2500 && duration_of_star<4000){
+            newDiv.style.translate=(`${x++/8}vw ${Y_axis_position}vw`);
+            newDiv.style.scale="0.3" ;
+            }
+            else if(duration_of_star>=4000 && duration_of_star< 5000){
+            newDiv.style.translate=(`${x++/2}vw ${Y_axis_position}vw`);
+            newDiv.style.scale="0.35" ;
+            }
+            else{
+            newDiv.style.translate=(`${x++/14}vw ${Y_axis_position}vw`);
+            newDiv.style.scale="0.2" ;
+            }
         }
     }
 }
@@ -68,9 +82,9 @@ function star_start(no_of_stars){
 
 let dotstar_naming_code=0;
 setInterval(()=>{
-    let no_of_dotstars=Math.floor(Math.random()*2);
+    let no_of_dotstars=Math.floor(Math.random()*5);
     dotstar_start(no_of_dotstars);
-},50);//produce number of stars
+},80);//produce number of dotstars
 
 function dotstar_life(newDiv){
     let duration_of_star=Math.floor(Math.random()*7000+15000);
@@ -81,7 +95,7 @@ function dotstar_life(newDiv){
         newDiv.remove();
     },duration_of_star);
     return duration_of_star;
-}
+}//life of dotstar
 
 function dotstar_start(no_of_stars){
     let newDiv,dotstar_code,duration_of_dotstar;
@@ -101,22 +115,6 @@ async function dotstar_style(newDiv,duration_of_star){
     let X_axis_position=(Math.random()*100);
     let Y_axis_position=(Math.random()*50);
     newDiv.style.translate=(`${X_axis_position}vw ${Y_axis_position}vh`);
-
-    // newDiv.style.animationDuration=`${duration_of_star+100}ms`;//make number to 0 to have twinkle effect
-
-    // let x=0,y=0,opacity=0,timer=0,time_clock;
-    // time_clock=setInterval(()=>{
-    //     movement();
-    // },1)
-
-    // function movement(){
-    //     if(timer++==duration_of_star){
-    //         clearInterval(time_clock);
-    //     }
-    //     else{
-    //         newDiv.style.translate=(`${x++/20}vw ${Y_axis_position}vw`);
-    //     }
-    // }
 }
 
 
