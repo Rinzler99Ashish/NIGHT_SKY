@@ -1,7 +1,20 @@
-#star{
+p {
+    position: relative;
+    line-height: 1.25em;
+  }
+  
+  p:after {
+    background-image: linear-gradient( to left, #fff, rgba(255, 255, 255, 0));
     position: absolute;
-    height: 10vw;
-    width: 10vw;
-    background-color: brown;
-    border-radius: -20VW;
-}
+    bottom: 0;
+    right: 0;
+    left: 0;
+    height: 1.25em;
+    content: '';
+  }
+  body{
+    background-color: blue;
+  }
+  p:hover{
+    color: antiquewhite;
+  }
