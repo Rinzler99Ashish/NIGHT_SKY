@@ -79,9 +79,9 @@ function star_start(no_of_stars){
 
 let dotstar_naming_code=0;
 setInterval(()=>{
-    let no_of_dotstars=Math.floor(Math.random()*10);
+    let no_of_dotstars=Math.floor(Math.random()*3);
     dotstar_start(no_of_dotstars);
-},100);//produce number of dotstars
+},70);//produce number of dotstars
 
 function dotstar_life(newDiv){
     let duration_of_star=Math.floor(Math.random()*7000+15000);
