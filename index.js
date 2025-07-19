@@ -79,7 +79,7 @@ function star_start(no_of_stars){
 
 let dotstar_naming_code=0;
 setInterval(()=>{
-    let no_of_dotstars=Math.floor(Math.random()*3);
+    let no_of_dotstars=Math.floor(Math.random()*5);
     dotstar_start(no_of_dotstars);
 },150);//produce number of dotstars
 
