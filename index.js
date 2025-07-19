@@ -2,9 +2,9 @@ let star_naming_code=0;
 
 
 setInterval(()=>{
-    let no_of_stars=Math.floor(Math.random()*4);
+    let no_of_stars=Math.floor(Math.random()*3);
     star_start(no_of_stars);
-},700);//produce number of stars
+},500);//produce number of stars
 
 
 
